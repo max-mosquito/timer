@@ -1,0 +1,116 @@
+@import url('../fonts/Roboto/stylesheet.css');
+*,
+*:before,
+*:after,
+*:focus {
+	padding: 0;
+	margin: 0;
+	border:none;
+	outline: none;
+	box-sizing:border-box;
+	
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+$maxWidth: 1920;
+@mixin adaptiv-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+$maxWidth: 1920;
+@mixin adaptiv-line-height($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ line-height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+$bb:#1883ff;
+body {
+	font-family: "Gotham Pro", sans-serif;
+	position: relative;
+}
+
+.container {
+	background-color: #353638;
+}
+.container_wrap {
+	max-width: 815px;
+	margin: 0 auto;
+	padding: 0 20px;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap:50px;
+	flex-wrap: wrap;
+}
+.item {
+	width: 225px;
+	height: 120px;
+	background-color: #696969;
+}
+.timer{
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid #9E9E9E;
+	p{
+		font-size: 22px;
+		font-weight: 400;
+		line-height: 21px;
+		color:#9E9E9E;
+	}
+}
+.control {
+	display: flex;
+	justify-content: space-arround;
+	justify-content: space-around;
+	align-items: center;
+	height: 50%;
+
+}
+.btn{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	background-color: transparent;
+	cursor: pointer;
+	&:before{
+		position: absolute;
+		content: "";
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+	}
+}
+.start:before {
+	background: url("img/start.svg") center no-repeat;
+}
+.pause {
+	background: url("img/pause.svg") center no-repeat;
+}
+.stop {
+	background: url("img/stop.svg") center no-repeat;
+}
+.item_add{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	p{
+		color:#9E9E9E;
+		font-size: 34px;
+		font-weight: bold;
+	}
+}
+
+// @include adaptiv-font(90, 36);
+// @include adaptiv-line-height(108, 40);

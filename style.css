@@ -1,0 +1,138 @@
+@import url("../fonts/Roboto/stylesheet.css");
+*,
+*:before,
+*:after,
+*:focus {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Gotham Pro", sans-serif;
+  position: relative;
+}
+
+.container {
+  background-color: #353638;
+}
+
+.container_wrap {
+  max-width: 815px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.item {
+  width: 225px;
+  height: 120px;
+  background-color: #696969;
+}
+
+.timer {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #9E9E9E;
+}
+.timer p {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #9E9E9E;
+}
+
+.control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-arround;
+      -ms-flex-pack: space-arround;
+          justify-content: space-arround;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50%;
+}
+
+.btn {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.start:before {
+  background: url("img/start.svg") center no-repeat;
+}
+
+.pause {
+  background: url("img/pause.svg") center no-repeat;
+}
+
+.stop {
+  background: url("img/stop.svg") center no-repeat;
+}
+
+.item_add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.item_add p {
+  color: #9E9E9E;
+  font-size: 34px;
+  font-weight: bold;
+}
