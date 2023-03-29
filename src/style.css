@@ -1,4 +1,3 @@
-@import url("../fonts/Roboto/stylesheet.css");
 *,
 *:before,
 *:after,
@@ -34,21 +33,6 @@ body {
   padding: 0 20px;
   padding-top: 70px;
   padding-bottom: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 50px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.item_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,15 +107,15 @@ body {
 }
 
 .start:before {
-  background: url("img/start.svg") center no-repeat;
+  background: url("./assets/start.svg") center no-repeat;
 }
 
 .pause {
-  background: url("img/pause.svg") center no-repeat;
+  background: url("./assets/pause.svg") center no-repeat;
 }
 
 .stop {
-  background: url("img/stop.svg") center no-repeat;
+  background: url("./assets/stop.svg") center no-repeat;
 }
 
 .item_add {
